@@ -7,6 +7,11 @@
 *
 */
 
-const remove = () => {};
+import {getState, setState} from "../store";
+
+const remove = (a) => {
+    const l = getState().filter(url => url !== a);
+    setState(l);
+};
 
 export default remove;

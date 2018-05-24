@@ -6,7 +6,8 @@
 * - you must use the functions from "../store"
 *
 */
+import data, {getState} from "../store";
 
-const get = () => {};
+const get = (index) => { return getState[index] };
 
 export default get;

@@ -8,7 +8,15 @@
 * - you must use the functions from "../store"
 *
 */
+import list from "./list";
+import {getState, setState} from "../store";
 
-const add = () => {};
+
+const add = (a) => {
+    //FIXME check if a is a tab or a single value
+    //if (a.is)
+    const l = [...getState(),  a];
+    setState(l);
+};
 
 export default add;
