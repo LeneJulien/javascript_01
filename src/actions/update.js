@@ -8,6 +8,14 @@
 *
 */
 
-const update = () => {};
+import {getState, setState} from "../store";
+
+const update = (img, indexi, url) => {
+    const l = getState().map((item, index) =>
+        item === img &&  indexi === index ? url : item
+    );
+    console.log(url);
+    setState(l);
+};
 
 export default update;

@@ -14,9 +14,13 @@ import {getState, setState} from "../store";
 
 const add = (a) => {
     //FIXME check if a is a tab or a single value
-    //if (a.is)
-    const l = [...getState(),  a];
-    setState(l);
+    if (a.constructor === Array){
+        const l = [...getState(), ...a]
+        setState(l);
+    } else {
+        const l = [...getState(),  a];
+        setState(l);
+    }
 };
 
 export default add;

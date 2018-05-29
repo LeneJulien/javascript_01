@@ -9,8 +9,8 @@
 
 import {getState, setState} from "../store";
 
-const remove = (a) => {
-    const l = getState().filter(url => url !== a);
+const remove = (index) => {
+    const l = getState().filter((url, i) => i !== index);
     setState(l);
 };
 
